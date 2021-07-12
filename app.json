@@ -1,0 +1,25 @@
+{
+    "name": "Snoop Dogg Bot",
+    "description": "A telegram chatbot/translator which converts text to gangsta",
+    "keywords": [
+        "snoop dogg",
+        "gangsta",
+        "gizoogle",
+        "chat bot",
+        "telegram"
+    ],
+    "website": "https://telegram.dog/botivity",
+    "repository": "https://github.com/PascalMaximus/snoopdoggbot",
+    "success_url": "https://telegram.dog/botivity",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Telegram bot api Token from https://telegram.dog/botfather"
+        }
+    },
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "image": "heroku/python"
