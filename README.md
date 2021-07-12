@@ -7,6 +7,14 @@ If you like this repo join my telegram channel [@botivity](https://telegram.dog/
 
 can be found on telegram as [snoopdoggbot](https://telegram.dog/snoopdoggbot)
 
+# installing
+
+## The Easy Way
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PascalMaximus/snoopdoggbot)
+
+
+
 
 
 Credits :
