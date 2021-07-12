@@ -17,7 +17,7 @@
         "BOT_TOKEN": {
             "description": "Telegram Bot Token from https://telegram.dog/botfather",
             "value": ""
-    }
+    },
     "buildpacks": [
         {
             "url": "heroku/python"
