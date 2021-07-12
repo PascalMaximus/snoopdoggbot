@@ -1,0 +1,5 @@
+gtts
+
+python-telegram-bot
+
+requests
