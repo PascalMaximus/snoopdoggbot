@@ -1,13 +1,7 @@
-gtts
-
+gtts 
 python-telegram-bot
-
 requests
-
 bs4
 uuid
-
 argparse
-
-
 lxml
