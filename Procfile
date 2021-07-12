@@ -1,1 +1,1 @@
-worker: python3 Cht.py
+worker: python3 bot.py
