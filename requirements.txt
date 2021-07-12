@@ -10,3 +10,4 @@ uuid
 argparse
 
 
+lxml
