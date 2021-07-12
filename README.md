@@ -5,4 +5,5 @@ A bot that converts text to gangsta
 
 
 
-Credits [chafla](https://github.com/chafla) for his gizoogle scrapper
+Credits :
+[chafla](https://github.com/chafla) for his gizoogle scrapper
