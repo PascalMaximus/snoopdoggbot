@@ -5,3 +5,6 @@ python-telegram-bot
 requests
 
 bs4
+uuid
+
+argparse
