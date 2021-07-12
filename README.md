@@ -7,7 +7,7 @@ If you like this repo join my telegram channel [@botivity](https://telegram.dog/
 
 can be found on telegram as [snoopdoggbot](https://telegram.dog/snoopdoggbot)
 
-[Deploy To heroku](https://heroku.com/deploy?template=https://github.com/PascalMaximus/snoopdoggbot/)
+
 
 Credits :
 [chafla](https://github.com/chafla) for his gizoogle scrapper
