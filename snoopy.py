@@ -3,22 +3,22 @@ from telegram import *
 from telegram.ext import *
 from telegram.utils.helpers import *
 from gtts import gTTS
-logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
-)
-logger = logging.getLogger(__name__)
 import re
 import bs4
 from urllib import parse
 import requests
 import argparse
 from uuid import uuid4
-
-
 import os
+
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
+)
+logger = logging.getLogger(__name__)
 
 TOKEN = os.environ.get("BOT_TOKEN", "")
 bot = Bot(TOKEN)
+
 def start(update: Update, context: CallbackContext) -> None:
     keyboard = [
         [
@@ -104,19 +104,16 @@ def tts(update: Update, context: CallbackContext) -> None:
   giz_text = giz[37].strip("\r\n")
   tts = gTTS(giz_text)
   voicy = tts.save('snoopy.mp3')
-  bot.send_audio(chat_id=chat_id, performer="snoopdog", duration= 0,thumb = "https://telegra.ph/file/5c4d779a942b2a4fbb2a2.jpg" ,audio=open('snoopy.mp3', 'rb'))
+  bot.send_audio(chat_id=chat_id, performer="snoopdog",audio=open('snoopy.mp3', 'rb'))
 
 def main() -> None:
-    
     updater = Updater(TOKEN)
     dispatcher = updater.dispatcher
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("pg13", pg13))
     dispatcher.add_handler(CommandHandler("tts", tts))
-    
     dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, gangsta))
     dispatcher.add_handler(InlineQueryHandler(inlinequery))
-
     updater.start_polling()
     updater.idle()
 if __name__ == '__main__':
