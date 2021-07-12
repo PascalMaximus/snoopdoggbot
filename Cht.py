@@ -13,7 +13,11 @@ from urllib import parse
 import requests
 import argparse
 from uuid import uuid4
-TOKEN = "YOUR_TOKEN_AS_A_STRING_INSIDE_THIS"
+
+
+import os
+
+TOKEN = os.environ.get("BOT_TOKEN", "")
 bot = Bot(TOKEN)
 def start(update: Update, context: CallbackContext) -> None:
     keyboard = [
