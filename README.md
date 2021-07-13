@@ -16,10 +16,10 @@ can be found on telegram as [snoopdoggbot](https://telegram.dog/snoopdoggbot)
 
 
 
-Feel free to open a pull request
-Contributions are welcome
+# Feel free to open a pull request
+  Contributions are welcome
 
-Credits :
+# Credits :
 [chafla](https://github.com/chafla) for his gizoogle scrapper
 and 
-[PTB](https://github.com/python-telegram-bot/python-telegram-bot) for their library
+[PTB](https://github.com/python-telegram-bot) for their wrapper that i can't refuse.
