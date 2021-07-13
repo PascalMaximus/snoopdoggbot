@@ -16,6 +16,8 @@ can be found on telegram as [snoopdoggbot](https://telegram.dog/snoopdoggbot)
 
 
 
+Feel free to open a pull request
+Contributions are welcome
 
 Credits :
 [chafla](https://github.com/chafla) for his gizoogle scrapper
