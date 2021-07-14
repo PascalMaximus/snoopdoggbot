@@ -73,10 +73,9 @@ def inlinequery(update: Update, context: CallbackContext) -> None:
     ]
 
     update.inline_query.answer(results=results,
-    switch_pm_text='yo u click here',
+    switch_pm_text='search something!',
     switch_pm_parameter='inline-help',
     cache_time=0,
-    
     auto_pagination=True,)
 
 @send_action(ChatAction.TYPING)
@@ -104,7 +103,9 @@ def tts(update: Update, context: CallbackContext) -> None:
   giz_text = giz[37].strip("\r\n")
   tts = gTTS(giz_text)
   voicy = tts.save('snoopy.mp3')
-  bot.send_audio(chat_id=chat_id, performer="snoopdog",audio=open('snoopy.mp3', 'rb'))
+  if voicy:
+      bot.send_audio(chat_id=chat_id, performer="snoopdog",audio=open('snoopy.mp3', 'rb'))
+  else update.message.reply_text("Faggot, Needs an argument, for eg:/tts i am a stupid guy who don't know to use a tts command ")
 
 def main() -> None:
     updater = Updater(TOKEN)
