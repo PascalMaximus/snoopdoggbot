@@ -23,7 +23,7 @@ def start(update: Update, context: CallbackContext) -> None:
     keyboard = [
         [
             InlineKeyboardButton("Use me inline 🐾 ", switch_inline_query_current_chat =""),
-            InlineKeyboardButton("Mah Channel", url= "https://telegram.dog/botivity")
+            InlineKeyboardButton("Join Mah Channel", url= "https://telegram.dog/botivity")
         ]
   
     ]
@@ -105,16 +105,16 @@ def tts(update: Update, context: CallbackContext) -> None:
   voicy = tts.save('snoopy.mp3')
   if voicy:
       bot.send_audio(chat_id=chat_id, performer="snoopdog",audio=open('snoopy.mp3', 'rb'))
-  else update.message.reply_text("Faggot, Needs an argument, for eg:/tts i am a stupid guy who don't know to use a tts command ")
+  else update.message.reply_text("Faggot, What did you expect a voice ,Needs an argument, for eg:/tts i am a stupid guy who don't know to use a tts command ")
 
 def main() -> None:
     updater = Updater(TOKEN)
-    dispatcher = updater.dispatcher
-    dispatcher.add_handler(CommandHandler("start", start))
-    dispatcher.add_handler(CommandHandler("pg13", pg13))
-    dispatcher.add_handler(CommandHandler("tts", tts))
-    dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, gangsta))
-    dispatcher.add_handler(InlineQueryHandler(inlinequery))
+    dp = updater.dispatcher
+    dp.add_handler(CommandHandler("start", start))
+    dp.add_handler(CommandHandler("pg13", pg13))
+    dp.add_handler(CommandHandler("tts", tts))
+    dp.add_handler(MessageHandler(Filters.text & ~Filters.command, gangsta))
+    dp.add_handler(InlineQueryHandler(inlinequery))
     updater.start_polling()
     updater.idle()
 if __name__ == '__main__':
