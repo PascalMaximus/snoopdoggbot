@@ -7,6 +7,11 @@ import requests
 from gtts import gTTS
 from urllib import parse
 from uuid import uuid4
+try:
+    from config import BOT_TOKEN
+except Exception as e:
+    pass
+
 # importing everything from ptb (im lazy af to list all things) maybe later
 from telegram import *
 from telegram.ext import *
@@ -101,18 +106,23 @@ def tts(update: Update, context: CallbackContext) -> None:
   soup = bs4.BeautifulSoup(soup_input, "lxml")
   giz = soup.find_all(text=True)
   giz_text = giz[37].strip("\r\n")
-  tts = gTTS(giz_text)
-  voicy = tts.save('snoopy.mp3')
   try:
+      tts = gTTS(giz_text)
+      voicy = tts.save('snoopy.mp3')
       bot.send_audio(chat_id=chat_id, performer="snoopdog",audio=open('snoopy.mp3', 'rb'))
+   
   except Exception as e:
-      update.message.reply_text("Faggot, What did you expect a voice ,Needs an argument, for eg:/tts i am a stupid guy who don't know to use a tts command ")
-
+      update.message.reply_text("Faggot, what did you expect a audio use /tts some text !.")
+   
   else:
-      update.message.reply_text("Faggot, What did you expect a voice ,Needs an argument, for eg:/tts i am a stupid guy who don't know to use a tts command ")
-    
+      pass
+
   finally:
-      os.remove(voicy)
+      # removing the waste audio file
+      try:
+          os.remove('snoopy.mp3')
+      except Exception as e:
+          pass
 
 def main() -> None:
     updater = Updater(TOKEN)
