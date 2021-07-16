@@ -115,8 +115,7 @@ def tts(update: Update, context: CallbackContext) -> None:
       update.message.reply_text("Faggot, What did you expect a voice ,Needs an argument, for eg:/tts i am a stupid guy who don't know to use a tts command ")
     
   finally:
-      os.remove
-
+      os.remove(voicy)
 
 def main() -> None:
     updater = Updater(TOKEN)
