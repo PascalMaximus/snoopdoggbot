@@ -1,14 +1,6 @@
-
-
-
-
- 
-
-
 {
 
     "name": "SnoopDoggBot",
-
     "description": "A simple telegram bot made with python.",
     "logo": "https://telegra.ph/file/5c4d779a942b2a4fbb2a2.jpg",
     "keywords": [
@@ -24,9 +16,7 @@
     ],
 
     "website": "https://telegram.dog/botivity",
-
     "repository": "https://github.com/pascalmaximus/snoopdoggbot",
-
     "env": {
 
         "BOT_TOKEN": {

@@ -1,16 +1,19 @@
 import logging
+import os
+import re
+import argparse
+import bs4
+import requests
+from gtts import gTTS
+from urllib import parse
+from uuid import uuid4
+# importing everything from ptb (im lazy af to list all things) maybe later
 from telegram import *
 from telegram.ext import *
 from telegram.utils.helpers import *
-from gtts import gTTS
-import re
-import bs4
-from urllib import parse
-import requests
-import argparse
-from uuid import uuid4
-import os
 
+
+# basic logging stuff in case something goes wrong
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
 )
@@ -32,10 +35,11 @@ def start(update: Update, context: CallbackContext) -> None:
     update.message.reply_markdown_v2(
         fr'Yo whatsup {user.mention_markdown_v2()} rap wit me or i will kick you read /pg13 before using please and join ma channel  @botivity\!', reply_markup=reply_markup)
     
-    
+# In case snoopdogg goes too much rogue (just a precaution also this is copied from gizoogle.net you can find it there minor modifications are made though)    
 def pg13(update: Update, context: CallbackContext) -> None:
   update.message.reply_text(" <u>Some Obscene Language</u> \n\nThis bot is only intended for mature audiences farmiliar with the gangsta slang used by Snoop Dogg, and anybody under the age of 13 should not even think about using this bot without adult supervision.\nApologies if you are in any way offended by the explicit wording used in the translations.\nThe slanguage used in our algorithm has been quoted from Snoop Dogg himself and is commonly used in movies, conversations and music he has written.\nThese words are based on slang and can not be interpreted in any other way other than how they are quoted. There are no racist words used in the algorithm.\nIt's mad libs meets gangsta rap y'all.", parse_mode=ParseMode.HTML)
-    
+
+#  Decorator for chat actions such as sending a message , sending a photo , sending a audio , sending a video etc. etc. you can find all the methods in python telegram bot documentation    
 from functools import wraps
 def send_action(action):
     def decorator(func):
@@ -45,8 +49,8 @@ def send_action(action):
             return func(update, context,  *args, **kwargs)
         return command_func
     return decorator
-    
 
+# TODO: Modularize code and prevent repeatation 
 def inlinequery(update: Update, context: CallbackContext) -> None:
   
     query = update.inline_query.query
@@ -60,8 +64,6 @@ def inlinequery(update: Update, context: CallbackContext) -> None:
   
     if query == "":
         return
-
-  
     results = [
         InlineQueryResultArticle(
             id=str(uuid4()),
@@ -88,6 +90,7 @@ def gangsta(update, context):
   soup = bs4.BeautifulSoup(soup_input, "lxml")
   giz = soup.find_all(text=True)
   giz_text = giz[37].strip("\r\n")
+
   update.message.reply_text(giz_text)
   
 @send_action(ChatAction.UPLOAD_VOICE)
@@ -103,9 +106,17 @@ def tts(update: Update, context: CallbackContext) -> None:
   giz_text = giz[37].strip("\r\n")
   tts = gTTS(giz_text)
   voicy = tts.save('snoopy.mp3')
-  if voicy:
+  try:
       bot.send_audio(chat_id=chat_id, performer="snoopdog",audio=open('snoopy.mp3', 'rb'))
-  else update.message.reply_text("Faggot, What did you expect a voice ,Needs an argument, for eg:/tts i am a stupid guy who don't know to use a tts command ")
+  except Exception as e:
+      update.message.reply_text("Faggot, What did you expect a voice ,Needs an argument, for eg:/tts i am a stupid guy who don't know to use a tts command ")
+
+  else:
+      update.message.reply_text("Faggot, What did you expect a voice ,Needs an argument, for eg:/tts i am a stupid guy who don't know to use a tts command ")
+    
+  finally:
+      os.remove
+
 
 def main() -> None:
     updater = Updater(TOKEN)
