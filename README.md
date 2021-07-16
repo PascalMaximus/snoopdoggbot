@@ -16,6 +16,10 @@ can be found on telegram as [snoopdoggbot](https://telegram.dog/snoopdoggbot)
 > Feel free to open a pull request
   Contributions are welcome
 
+## The hard way
+
+cmon dude you know the hard way
+
 # Credits 
 [chafla](https://github.com/chafla) for his gizoogle scrapper
 and 
@@ -23,7 +27,8 @@ and
 [PTB](https://github.com/python-telegram-bot) ~~for their wrapper that i can't refuse.~~
 
 
-# NOTE
+# Note
+
 > THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE

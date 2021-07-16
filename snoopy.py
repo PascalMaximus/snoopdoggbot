@@ -12,7 +12,6 @@ from telegram import *
 from telegram.ext import *
 from telegram.utils.helpers import *
 
-
 # basic logging stuff in case something goes wrong
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
@@ -35,7 +34,7 @@ def start(update: Update, context: CallbackContext) -> None:
     update.message.reply_markdown_v2(
         fr'Yo whatsup {user.mention_markdown_v2()} rap wit me or i will kick you read /pg13 before using please and join ma channel  @botivity\!', reply_markup=reply_markup)
     
-# In case snoopdogg goes too much rogue (just a precaution also this is copied from gizoogle.net you can find it there minor modifications are made though)    
+# In case snoopdogg uses too much explicit language (just a precaution also this is copied from gizoogle.net you can find it there minor modifications are made though)    
 def pg13(update: Update, context: CallbackContext) -> None:
   update.message.reply_text(" <u>Some Obscene Language</u> \n\nThis bot is only intended for mature audiences farmiliar with the gangsta slang used by Snoop Dogg, and anybody under the age of 13 should not even think about using this bot without adult supervision.\nApologies if you are in any way offended by the explicit wording used in the translations.\nThe slanguage used in our algorithm has been quoted from Snoop Dogg himself and is commonly used in movies, conversations and music he has written.\nThese words are based on slang and can not be interpreted in any other way other than how they are quoted. There are no racist words used in the algorithm.\nIt's mad libs meets gangsta rap y'all.", parse_mode=ParseMode.HTML)
 
@@ -52,7 +51,6 @@ def send_action(action):
 
 # TODO: Modularize code and prevent repeatation 
 def inlinequery(update: Update, context: CallbackContext) -> None:
-  
     query = update.inline_query.query
     params = {"translatetext": query}
     target_url = "http://www.gizoogle.net/textilizer.php"
@@ -90,7 +88,6 @@ def gangsta(update, context):
   soup = bs4.BeautifulSoup(soup_input, "lxml")
   giz = soup.find_all(text=True)
   giz_text = giz[37].strip("\r\n")
-
   update.message.reply_text(giz_text)
   
 @send_action(ChatAction.UPLOAD_VOICE)
@@ -119,13 +116,18 @@ def tts(update: Update, context: CallbackContext) -> None:
 
 def main() -> None:
     updater = Updater(TOKEN)
+
     dp = updater.dispatcher
+
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("pg13", pg13))
     dp.add_handler(CommandHandler("tts", tts))
     dp.add_handler(MessageHandler(Filters.text & ~Filters.command, gangsta))
+
     dp.add_handler(InlineQueryHandler(inlinequery))
+
     updater.start_polling()
     updater.idle()
+
 if __name__ == '__main__':
     main()
