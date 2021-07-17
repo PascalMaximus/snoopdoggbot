@@ -21,9 +21,11 @@ can be found on telegram as [snoopdoggbot](https://telegram.dog/snoopdoggbot)
 `git clone https://github.com/PascalMaximus/snoopdoggbot`
 
 `cd snoopdoggbot`
-> Use virtual environments while installing packages
+
 `pip3 install -r requirements.txt`
-> Edit config.py (See sample config for a example)
+
+> Use virtual environments while installing packages
+> Edit [config.py](./config,.py) (See [sample config](./sampleconfig.py) for a example)
 > Then run
 `python3 snoopy.py`
 
