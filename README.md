@@ -25,7 +25,7 @@ can be found on telegram as [snoopdoggbot](https://telegram.dog/snoopdoggbot)
 `pip3 install -r requirements.txt`
 
 > Use virtual environments while installing packages
-> Edit [config.py](./config,.py) (See [sample config](./sampleconfig.py) for a example)
+> Edit [config.py](/config.py) (See [sample config](/sampleconfig.py) for a example)
 > Then run
 `python3 snoopy.py`
 
