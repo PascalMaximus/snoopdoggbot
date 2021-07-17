@@ -19,6 +19,7 @@ can be found on telegram as [snoopdoggbot](https://telegram.dog/snoopdoggbot)
 ## The hard way
 
 `git clone https://github.com/PascalMaximus/snoopdoggbot`
+
 `cd snoopdoggbot`
 > Use virtual environments while installing packages
 `pip3 install -r requirements.txt`
