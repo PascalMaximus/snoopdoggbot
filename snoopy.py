@@ -84,7 +84,7 @@ def gangsta(update, context):
   
 @send_action(ChatAction.UPLOAD_VOICE)
 # TODO: Find any male tts module 
-# This is funny
+# This is funny a male bot with female voice
 def tts(update: Update, context: CallbackContext) -> None:
   chat_id = update.effective_chat.id
   argument = context.args
