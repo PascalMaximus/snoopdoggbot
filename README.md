@@ -13,8 +13,7 @@ can be found on telegram as [snoopdoggbot](https://telegram.dog/snoopdoggbot)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PascalMaximus/snoopdoggbot)
 
-> Feel free to open a pull request
-  Contributions are welcome
+
 ## The hard way
 
 `git clone https://github.com/PascalMaximus/snoopdoggbot`
@@ -38,7 +37,9 @@ Then run
   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   SOFTWARE.
-
+  
+> Feel free to open a pull request
+  Contributions are welcome if the code works
 # Credits 
 [chafla](https://github.com/chafla) for his gizoogle scrapper
 and [PTB](https://github.com/python-telegram-bot) for their wrapper
