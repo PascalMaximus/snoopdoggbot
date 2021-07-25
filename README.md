@@ -9,25 +9,8 @@ can be found on telegram as [snoopdoggbot](https://telegram.dog/snoopdoggbot)
 
 # installation
 
-## Easy way
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PascalMaximus/snoopdoggbot)
-
-> Feel free to open a pull request
-  Contributions are welcome
-
-## The hard way
-
-`git clone https://github.com/PascalMaximus/snoopdoggbot`
-
-`cd snoopdoggbot`
-
-`pip3 install -r requirements.txt`
-
-> Use virtual environments while installing packages
-Edit [config.py](/config.py) (See [sample config](/sampleconfig.py) for a example)
-Then run
-`python3 snoopy.py`
+gizoogle changed this no longer works 
+i will be fixing this later
 
 # Note
 
