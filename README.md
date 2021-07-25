@@ -9,7 +9,7 @@ can be found on telegram as [snoopdoggbot](https://telegram.dog/snoopdoggbot)
 
 # installation
 
-gizoogle changed this no longer works 
+gizoogle changed and this no longer working,
 i will be fixing this later
 
 # Note
