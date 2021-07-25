@@ -41,6 +41,6 @@ Then run
 
 # Credits 
 [chafla](https://github.com/chafla) for his gizoogle scrapper
-and [PTB](https://github.com/python-telegram-bot) ~~for their wrapper that i can't refuse.~~
+and [PTB](https://github.com/python-telegram-bot) for their wrapper
 
 [botivity](https://telegram.dog/botivity)
