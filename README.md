@@ -1,6 +1,6 @@
 # snoopdoggbot
 A bot that converts text to gangsta 
-(Snoopy doggs slang)
+
 
 # installation
 
