@@ -1,9 +1,8 @@
-gtts == 2.2.3 
 python-telegram-bot == 13.6 
 requests == 2.22.0 
-bs4 == 0.0.1 
-lxml == 4.6.3
-lxml == 4.6.3
+bs4
+lxml
 uuid 
 argparse
+gtts
 
