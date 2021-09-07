@@ -101,7 +101,6 @@ def inlinequery(update: Update, context: CallbackContext) -> None:
     )
 
 
-# https://stackoverflow.com/questions/41636867/how-can-i-share-a-variable-between-functions-in-python
 @send_action(ChatAction.TYPING)
 def gangsta(update, context):
     user_message = update.message.text
