@@ -1,6 +1,7 @@
 # snoopdoggbot
 A bot that converts text to gangsta 
 
+This is obsolete and create a issue if it's not working
 
 # installation
 
