@@ -16,7 +16,7 @@ Then run
 
 
 # Note
-1. Try to use more than one word.(The bot echoes when only one/two words are given).
+1. Try to use more than one word.(The bot echoes the message when only one/two words are given).
 2. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
