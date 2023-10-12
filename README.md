@@ -1,19 +1,9 @@
 # snoopdoggbot
 A bot that converts text to gangsta 
 
-This is obsolete and create a issue if it's not working
-I will be rewriting this in pyrogram later.
-
 # installation
 
-## Easy way
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PascalMaximus/snoopdoggbot)
-
-
-## The hard way
-
-`git clone https://github.com/PascalMaximus/snoopdoggbot`
+`git clone https://github.com/arsenikov/snoopdoggbot`
 
 `cd snoopdoggbot`
 
